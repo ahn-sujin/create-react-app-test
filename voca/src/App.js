@@ -2,22 +2,21 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const name = "asj";
+  const link = {
+    name:'github',
+    url:'https://github.com/ahn-sujin'
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          hello asj
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p
+        style={{
+          color:"#fff",
+          backgroundColor:"#000"
+        }}
+      >Hello {name} <span>{2 + 3}</span>
+      </p>
+      <a href={link.url}>{link.name}</a>
     </div>
   );
 }
