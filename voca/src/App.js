@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Hello/>
-      <div className = {styles.box}>app.css에 있는 style</div>
+      {/* <div className = {styles.box}>app.css에 있는 style</div> */}
     </div>
   );
 }
