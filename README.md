@@ -18,7 +18,10 @@
 ### node_modules 폴더
 - 프로젝트를 실행할때 사용되는 dependencies 모듈들이 모여있는 폴더이다.
 - 해당 내용은 ```package.json``` 에 dependencies에 적혀있다.
+ <img src="/images/react03.png" width="300"/>
+ 
 - git에는 올리지 않는다.(용량이 많고 무거움)
+
 
 ### public 폴더
 - ```<div id="root"></div>``` 밑으로 react코드가 실행돼서 만들어진 DOM이 구현된다.
@@ -42,6 +45,7 @@
 
 ### JSX
 - 자바스크립트 내부에 HTML 처럼 작성하는 것을 말한다.
+<img src="/images/JSX.png" width="550"/>
 
 
 
