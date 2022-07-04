@@ -13,6 +13,8 @@
 - ```webpack``` ```babel``` 을 이용하여 수동으로 설치하고 세팅시에 번거로움이 있다.
 - 하지만, ``` npx create-react-app 프로젝트명 ``` 를 사용하면 쉽고 빠르게 개발환경 세팅이 가능하다.
 
+<img src="/images/react01.png" width="300"/>
+
 ### node_modules 폴더
 - 프로젝트를 실행할때 사용되는 dependencies 모듈들이 모여있는 폴더이다.
 - 해당 내용은 ```package.json``` 에 dependencies에 적혀있다.
