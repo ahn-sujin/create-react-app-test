@@ -1,36 +1,20 @@
+import { useState } from 'react'; 
 import Name from './Name'
 import styles from './Hello.module.css';
 
 const Hello = () => {
-    function showName (){
-        console.log('asj');
-    }
+    const [name, nameChange] = useState('asj');
 
-    function showAge (age){
-        console.log (age);
-    }
-
-    function inputChange (txt) {
-        console.log(txt)
-    }
+    function chageName() {
+        const newName = name === 'asj' ? 'hdh' : 'asj';
+        nameChange(newName);
+     }
 
     return (
         <div>
-            <span>Hello</span>
-            {/* <Name/> */}
-            {/* <div className={styles.box}>Hello.css에 있는 sytle</div> */}
-            <button onClick = {showName} >Show Name</button>
-            <button onClick = {
-                ()=>{
-                    showAge(26);
-                }
-            } >Show Age</button>
-            <input onChange = {
-                (e) => {
-                    const event = e.target.value;
-                    inputChange(event)
-                }
-            }></input>
+            <span>State</span>
+            <p>{name}</p>
+            <button onClick = {chageName}>Chane Name</button>
         </div>
     )
 }
