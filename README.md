@@ -22,6 +22,8 @@
 
 ### public 폴더
 - ```<div id="root"></div>``` 밑으로 react코드가 실행돼서 만들어진 DOM이 구현된다.
+<img src="/images/react02.png" width="550"/>
+
 
 ### src폴더
 - 대부분의 작업이 이뤄지는 폴더이다. (css,js 파일이 존재)
