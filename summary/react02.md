@@ -23,3 +23,5 @@
 
 ### 컴포넌트 만들기
 - 컴포넌트 파일은 src폴더에 component폴더를 만들어 관리하도록 한다.
+
+<img src="/images/react07.png" width="300">
