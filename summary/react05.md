@@ -4,14 +4,10 @@
 - 컴포넌트가 갖고 있는 **속성값** 이다.
 - 속성값이 변하면 리액트는 자동으로 ui를 변화시킨다.
 
-<br>
-
 ### Hook
 - react16.8 부터 사용이 가능하다.
 - 모든 컴포넌트를 함수형으로 만들 수 있다.
 - 함수형 컴포넌트에서도 state와 lifecycle 관리가 가능하다.
-
-<br>
 
 ### useState
 - ```import {useState} from 'react'``` 로 import해야 사용이 가능하다.
