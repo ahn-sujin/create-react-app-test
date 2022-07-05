@@ -14,9 +14,9 @@
 - 배열로 반환한다.
   - ```const [name, setName] = useState();```
   - 배열구조분해를 사용한다.
-  - name : state(변수명)
-  - setName : state를 변경해주는 함수
-  - useState(초기값)
+  - ```name``` : state(변수명)
+  - ```setName``` : state를 변경해주는 함수
+  - ```useState(초기값)```
 
 - 동일한 컴포넌트 안에 있더라고 state는 각각 관리된다.(다른 state에 영향을 미치지 않는다.)
 
