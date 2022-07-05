@@ -14,4 +14,8 @@
 - ```style```은 객체로 전달해야한다. 
   - camleCase로 작성한다.
   - ```-```는 사용하지 않는다. (background-color -> backgroundColor)
+
+<img src="/images/react06.png" width="400">
+
+
 - ```{변수,숫자,문자}```는 사용이 가능하지만 ```{boolean, 객체}```는 사용할 수 없다.
