@@ -72,7 +72,7 @@ export default Hello;
   - 컴포넌트에서 설정한 state값을 변경할 수 있다. (props로 넘겨 받은 값은 변경X, 억지로 변경시 error발생)
 
 > 객체 인자를 통해 props 받아오기
-```javascirpt
+```javascript
 function Dog(props) {
   consol.log(props)
   //결과
@@ -84,7 +84,6 @@ function Dog(props) {
 		<div>{props.age}</div>
 	}
 }
-
 
 ```
 - props를 받는 함수형 컴포넌트에 인자를 정의하면, props를 속성으로 가지는 객체 Object가 해당 인자로 전달된다. 
