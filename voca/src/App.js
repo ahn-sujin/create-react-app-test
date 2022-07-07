@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, Link} from "react-router-dom";
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Header from './component/Header';
 import DayList from './component/DayList';
 import Day from './component/Day';
@@ -7,16 +7,10 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header />
+        <Header/>
         <Routes>
-          <Route exact path="/" element={<DayList/>} />
-          <Route path="/day/:day" element={<Day/>} />
-          {/* <Route exact path="/">
-            <DayList />
-          </Route>
-          <Route path="/day">
-            <Day /> 
-          </Route> */}
+          <Route path="/" element={<DayList />}></Route>
+          <Route path="/day/:day" element={<Day />}></Route>
         </Routes>
       </div>
     </BrowserRouter>
