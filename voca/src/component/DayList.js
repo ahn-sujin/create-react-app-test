@@ -4,25 +4,16 @@ import {useState, useEffect} from 'react';
 
 const DayList = () => {
     const [days, setDays] = useState([]);    
-    const [count, setCount] = useState(0);
-
-    function onClick1(){
-        setCount(count + 1)
-    }
-
-    function onClick2(){
-        setDays([
-            ...days,
-            {
-                id:Math.random(),
-                day: 1
-            }
-        ])
-    }
-
-    useEffect(()=>{
-        console.log('count change')
-    },[count])
+    
+    useEffect(() => {
+        fetch('http://localhost:3001/days')
+        .then((res) => {
+            return res.json()
+        })
+        .then((data) => {
+            setDays(data)
+        })
+    },[])
 
     return(
         <>
@@ -33,8 +24,6 @@ const DayList = () => {
                     </li>
                 ))}
             </ul>
-            <button onClick = {onClick1}>{count}</button>
-            <button onClick = {onClick2}>day change</button>
         </>
         
     )
