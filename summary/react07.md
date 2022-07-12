@@ -77,3 +77,75 @@ export default DayList;
 ```
 
 <br>
+
+### URL 파라미터
+- ```URL 파라미터```는 주소의 경로에 유동적인 값을 넣는 형태이다.
+- 주로 ```URL 파라미터```는 ID 또는 이름을 사용하여 특정 데이터를 조회할 때 사용한다.
+
+<br>
+
+> Day.js
+```javascript
+import { useParams } from 'react-router-dom';
+import Word from './Word';
+import useFetch from '../hooks/useFetch';
+
+const Day = () => {
+    const day = useParams().id;
+    const words = useFetch(`http://localhost:3001/words?day=${day}`);
+
+    return(
+        <div>
+            <h2>Day {day}</h2>
+            <table>
+                <tbody>
+                    {words.map(word => (
+                        <Word word = {word} key = {word.id}></Word>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    )
+}
+
+export default Day;
+
+
+```
+- URL 파라미터는 useParams 라는 Hook을 사용하여 객체 형태로 조회할 수 있다.
+  - ```import { useParams } from 'react-router-dom';```
+- URL 파라미터의 이름은 라우트 설정을 할 때 Route 컴포넌트의 path props와 동일하게 해준다.
+  - ```const day = useParams().id; ```
+
+<br>
+
+> App.js
+```javascript
+...
+
+function App() {
+  return (
+    <BrowserRouter>
+      <div className="App">
+        <Header/>
+        <Routes>
+          <Route path="/" element={<DayList />}></Route>
+          <Route path="/day/:id" element={<Day />}></Route>
+          <Route path="/create_word" element={<CreateWord />}></Route>
+          <Route path="/create_day" element={<CreateDay />}></Route>
+          <Route path="/*" element={<EmptyPage/>}></Route>
+        </Routes>
+      </div>
+    </BrowserRouter>
+    
+  );
+}
+
+...
+
+```
+- URL 파라미터는 ```<Route path="/day/:id" element={<Day />}></Route>``` 과 같이 경로에 ```:``` 를 사용하여 설정한다. 
+
+
+
+
