@@ -43,7 +43,7 @@
       "day": 3,
       "eng": "window",
       "kor": "창문",
-      "isDone": false,
+      "isDone": true,
       "id": 7
     },
     {
@@ -80,6 +80,20 @@
       "kor": "사과",
       "isDone": false,
       "id": 12
+    },
+    {
+      "day": "4",
+      "eng": "cat",
+      "kor": "고양이",
+      "isDone": false,
+      "id": 13
+    },
+    {
+      "day": "1",
+      "eng": "umbrella",
+      "kor": "우산",
+      "isDone": false,
+      "id": 14
     }
   ]
 }

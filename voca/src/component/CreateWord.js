@@ -1,10 +1,16 @@
 import { useRef } from 'react';
+import { useNavigate } from 'react-router';
 import useFetch from '../hooks/useFetch';
 
 const CreateWord = () => {
     const days = useFetch('http://localhost:3001/days');
+    const navigate = useNavigate();
 
-    function onSubmit(e) {
+    const engRef = useRef(null);
+    const korRef = useRef(null);
+    const dayRef = useRef(null);
+
+    function onSubmit(e){
         e.preventDefault();
 
         fetch(`http://localhost:3001/words`,{
@@ -20,35 +26,33 @@ const CreateWord = () => {
             }),
         }).then((res) => {
             if(res.ok){
-                alert('단어가 추가되었습니다.')
+                alert('단어가 추가되었습니다.');
+                navigate(`/day/${dayRef.current.value}`);
             }
         });
     }
 
-    const engRef = useRef(null);
-    const korRef = useRef(null);
-    const dayRef = useRef(null);
-    
     return(
-       <form>
-           <div className ="input_area">
+        <form>
+            <div className = "input_area">
                 <label>Eng</label>
-                <input type="text" placeholder="dog" ref={engRef}></input>
-           </div>
-           <div className ="input_area">
+                <input type="text" placeholder="Dog" ref = {engRef}></input>
+            </div>
+            <div className = "input_area">
                 <label>Kor</label>
-                <input type="text" placeholder="개" ref={korRef}></input>
-           </div>
-           <div className="input_area">
+                <input type="text" placeholder="개" ref = {korRef}></input>
+            </div>
+            <div className = "input_area">
                 <label>Day</label>
-                <select ref={dayRef}>
-                    {days.map(day => (
-                        <option key={day.id} value={day.day}>{day.day}</option>
+                <select ref = {dayRef}>
+                    {days.map((day) => (
+                        <option key = {day.id} value ={day.day}>{day.day}</option>
                     ))}
                 </select>
-           </div>
-           <button onClick = {onSubmit}>저장</button>
-       </form>
+            </div>
+            <button onClick={onSubmit}>저장</button>
+        </form>
+
     )
 }
 
