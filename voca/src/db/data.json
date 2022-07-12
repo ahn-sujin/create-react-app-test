@@ -15,6 +15,14 @@
     {
       "day": 4,
       "id": 4
+    },
+    {
+      "day": 5,
+      "id": 5
+    },
+    {
+      "day": 6,
+      "id": 6
     }
   ],
   "words": [
@@ -94,6 +102,20 @@
       "kor": "우산",
       "isDone": false,
       "id": 14
+    },
+    {
+      "day": "5",
+      "eng": "run ",
+      "kor": "뛰다",
+      "isDone": false,
+      "id": 15
+    },
+    {
+      "day": "6",
+      "eng": "work",
+      "kor": "일하다",
+      "isDone": false,
+      "id": 16
     }
   ]
 }
