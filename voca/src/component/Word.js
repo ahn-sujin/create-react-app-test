@@ -1,8 +1,9 @@
 import { useState } from "react";
 
-const Word = ( {word} ) => {
+const Word = (props) => {
     const [isShow, setIsShow] = useState(false);
-    const [isDone, setIsDone] = useState(word.isDone);
+    const [isDone, setIsDone] = useState(props.word.isDone);
+    const [word, setWord] = useState(props.word);
 
     function toggleShow(){
         setIsShow(!isShow);
@@ -26,6 +27,22 @@ const Word = ( {word} ) => {
         });
     }
 
+    function del(){
+        if(window.confirm('삭제하시겠습니까?')){
+            fetch(`http://localhost:3001/words/${word.id}`,{
+            method: 'DELETE',
+            }).then((res) => {
+                if(res.ok){
+                    setWord({id : 0});
+                }
+            })
+        }
+    }
+
+    if(word.id === 0){
+        return null;
+    }
+
     return (
         <tr className={isDone ? "off" : "" }>
             <td>
@@ -35,7 +52,7 @@ const Word = ( {word} ) => {
             <td>{isShow && word.kor}</td>
             <td>
                 <button onClick = {toggleShow}>뜻{isShow ? '숨기기' : '보기'}</button>
-                <button className="btn_del">삭제</button>
+                <button onClick = {del} className="btn_del">삭제</button>
             </td>
         </tr>
     )
