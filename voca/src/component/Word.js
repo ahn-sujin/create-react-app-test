@@ -12,7 +12,7 @@ const Word = ( {word} ) => {
         // setIsDone(!isDone);
         fetch(`http://localhost:3001/words/${word.id}`,{
             method : 'PUT',
-            header : {
+            headers : {
                 'Content-Type' : 'application/json'
             },
             body: JSON.stringify({
@@ -23,8 +23,7 @@ const Word = ( {word} ) => {
             if(res.ok){
                 setIsDone(!isDone);
             }
-        })
-
+        });
     }
 
     return (
