@@ -9,5 +9,7 @@
 ### [05. State와 Props](/summary/react05.md)
 ### [06. map()](/summary/react06.md)
 ### [07. Router](/summary/react07.md)
+### [08. json-server, REST API](/summary/react08.md)
+### [09. useEffect, fetch()로 api호출](/summary/react09.md)
 
 
