@@ -10,7 +10,7 @@
 - 설치
   - ``` npm install react-router-dom ```
 - import
-  - ``` import { 라우터 컴포넌트명 } from 'react-router-com'; ```
+  - ``` import { 라우터 컴포넌트명 } from 'react-router-dom'; ```
 
 <br>
 
