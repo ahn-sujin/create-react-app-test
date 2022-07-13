@@ -11,7 +11,9 @@
   - ```json-server -g json-server ```
   - ```json-server --watch 경로 --port 포트번호``` &nbsp; &nbsp; 예시) ```json-server --watch ./src/db/data.json --port 3001```
 - 오류
-  ![npm 전역 설치 오류 이미지]()
+
+  <img src="/images/react09.png" width="800"/>
+  
   - ❗️Mac에서 global 설치시 오류가 발생 할 수 있음, 앞에 ```sudo```를 입력해준다.
   - ```sudo npm install -g json-server```를 입력하고, 비밀번호는 맥의 비밀번호를 입력해주면 된다.
 
