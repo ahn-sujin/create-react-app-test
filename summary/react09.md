@@ -72,3 +72,64 @@ export default Count
 - ADD DAY 버튼을 클릭할때 마다 DAY버튼이 생성된다.
 - 의존성 배열에 ```[count]```를 지정해줬기 때문에 count가 변경되는 함수가 실행될 때에만 useEffect함수가 실행된다.
 
+<br>
+
+## fetch함수
+- ```fetch()```
+   - 백앤드로부터 데이터를 받아오기 위해, api를 호출하고 데이터를 응답받기 위해 사용하는 함수이다.
+```javascript
+let promise = fetch(url, [options])
+
+```
+   - url-접근하고자 하는 URL
+   - options - 선택 매개변수, mehtod나 header 등을 지정할 수 있다. [더 자세한 내용](https://velog.io/@daybreak/React-Fetch%ED%95%A8%EC%88%98)
+
+```javascript
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    // data를 응답 받은 후의 로직
+ });
+
+```
+
+> useEffect와 fetch함수를 이용한 api호출
+```javascript
+import {Link} from 'react-router-dom';
+import {useState, useEffect} from 'react';
+// import dummy from '../db/data.json';
+
+const DayList = () => {
+    const [days, setDays] = useState([]);    
+    
+    useEffect(() => {
+        fetch('http://localhost:3001/days')
+        .then((res) => {
+            return res.json()
+        })
+        .then((data) => {
+            setDays(data)
+        })
+    },[])
+
+    return(
+        <>
+            <ul className ="list_day">
+                {days.map(day => (
+                    <li key = {day.id}>
+                        <Link to = {`/day/${day.day}`}>{day.day}Day</Link>
+                    </li>
+                ))}
+            </ul>
+        </>
+        
+    )
+}
+
+export default DayList;
+
+
+```
+
+
+
