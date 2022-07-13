@@ -116,6 +116,20 @@
       "kor": "일하다",
       "isDone": false,
       "id": 16
+    },
+    {
+      "day": "6",
+      "eng": "tea",
+      "kor": "차",
+      "idDone": false,
+      "id": 17
+    },
+    {
+      "day": "6",
+      "eng": "coffee",
+      "kor": "커피 ",
+      "idDone": false,
+      "id": 18
     }
   ]
 }
