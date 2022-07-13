@@ -97,7 +97,6 @@ fetch(url)
 ```javascript
 import {Link} from 'react-router-dom';
 import {useState, useEffect} from 'react';
-// import dummy from '../db/data.json';
 
 const DayList = () => {
     const [days, setDays] = useState([]);    
@@ -130,6 +129,7 @@ export default DayList;
 
 
 ```
+
 
 
 
