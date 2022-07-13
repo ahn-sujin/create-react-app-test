@@ -1,6 +1,6 @@
 # React JS
 
-초보자를 위한 리액트 기초개념 정리
+초보자를 위한 리액트 기초개념 정리 (ref.[코딩앙마](https://www.youtube.com/watch?v=05uFo_-SGXU&list=PLZKTXPmaJk8J_fHAzPLH8CJ_HO_M33e7-))
 
 ### [01. 리액트 설치](/summary/react01.md)
 ### [02. 컴포넌트](/summary/react02.md)
