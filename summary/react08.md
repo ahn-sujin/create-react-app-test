@@ -8,7 +8,7 @@
 - 별도의 서버가 없는 환경에서 프론트엔드 작업을 진행하고자 할때 유용하다. (공부목적, 작은 프로젝트용)
 - 쉽고 빠르게 REST API를 구축한다.
 - 설치
-  - ```json-server -g json-server ```
+  - ```npm install -g json-server ```
   - ```json-server --watch 경로 --port 포트번호``` &nbsp; &nbsp; 예시) ```json-server --watch ./src/db/data.json --port 3001```
 - 오류
 
